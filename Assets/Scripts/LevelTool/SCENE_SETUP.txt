@@ -1,0 +1,49 @@
+// Ce fichier de documentation explique comment mettre en place les scènes
+
+# SETUP DES SCÈNES
+
+## Scène 1: Boot (Démarrage)
+
+1. Créez une nouvelle scène nommée "Boot"
+2. Ajoutez un GameObject vide nommé "BootLoader"
+3. Attachez le script GameBootLoader.cs
+4. C'est tout! Cette scène s'affichera au démarrage
+
+## Scène 2: LevelEditor (Éditeur)
+
+1. Créez une nouvelle scène nommée "LevelEditor"
+2. Setup de la caméra:
+   - Position: (0, 5, -15)
+   - Regarder vers l'avant/bas pour voir la grille
+
+3. Créez un GameObject "Editor" avec:
+   - InGameLevelEditor.cs
+   - InGameLevelEditorUI.cs (optionnel, peut être sur n'importe quel GameObject)
+
+4. Assignez les références:
+   ```
+   Level Data: Votre RythmLevelData
+   Music Event: Votre EventReference FMOD
+   Block Prefab: Votre préfab de bloc
+   Selected Block Material: Material jaune/orange
+   Normal Block Material: Material rouge
+   ```
+
+5. Optionnel - Créez un GameObject "Floor" pour les repères:
+   - Cube avec Y scale = 0.01
+   - Position Y = -1
+   - Material gris semi-transparent
+
+## Scène 3: Gameplay (Jeu)
+
+- Configurez votre scène de gameplay normale
+- Elle sera chargée quand l'utilisateur clique sur "PLAY GAME"
+
+## Configuration Build Settings
+
+File > Build Settings, ajoutez dans cet ordre:
+0. Boot
+1. LevelEditor
+2. Gameplay (ou votre scène de jeu)
+
+Maintenant quand vous lancez le jeu, l'écran de démarrage apparaîtra en premier!

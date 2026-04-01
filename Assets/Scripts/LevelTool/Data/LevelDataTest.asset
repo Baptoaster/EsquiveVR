@@ -19,473 +19,674 @@ MonoBehaviour:
     blocks:
     - x: 0
       z: 2
+      type: 0
     - x: 1
       z: 2
+      type: 0
     - x: 2
       z: 2
+      type: 0
     - x: 3
       z: 2
+      type: 0
   - beatIndex: 2
     blocks: []
   - beatIndex: 4
     blocks:
     - x: 0
       z: 1
+      type: 0
     - x: 3
       z: 1
+      type: 0
     - x: 0
       z: 2
+      type: 0
     - x: 3
       z: 2
+      type: 0
     - x: 3
       z: 0
+      type: 0
     - x: 0
       z: 0
+      type: 0
   - beatIndex: 6
     blocks: []
   - beatIndex: 8
     blocks:
     - x: 0
       z: 0
+      type: 0
     - x: 0
       z: 2
+      type: 0
     - x: 3
       z: 0
+      type: 0
     - x: 3
       z: 2
+      type: 0
     - x: 2
       z: 2
+      type: 0
     - x: 1
       z: 2
+      type: 0
   - beatIndex: 10
     blocks: []
   - beatIndex: 12
     blocks:
     - x: 1
       z: 2
+      type: 0
     - x: 0
       z: 2
+      type: 0
     - x: 2
       z: 2
+      type: 0
     - x: 3
       z: 2
+      type: 0
     - x: 3
       z: 0
+      type: 0
     - x: 2
       z: 0
+      type: 0
     - x: 0
       z: 0
+      type: 0
     - x: 1
       z: 0
+      type: 0
   - beatIndex: 14
     blocks:
     - x: 3
       z: 2
+      type: 0
     - x: 2
       z: 2
+      type: 0
     - x: 1
       z: 2
+      type: 0
     - x: 0
       z: 2
+      type: 0
   - beatIndex: 16
     blocks:
     - x: 3
       z: 1
+      type: 0
     - x: 3
       z: 0
+      type: 0
     - x: 3
       z: 2
+      type: 0
     - x: 0
       z: 2
+      type: 0
     - x: 0
       z: 1
+      type: 0
     - x: 0
       z: 0
+      type: 0
     - x: 1
       z: 0
+      type: 0
     - x: 2
       z: 0
+      type: 0
   - beatIndex: 18
     blocks:
     - x: 0
       z: 1
+      type: 0
     - x: 0
       z: 2
+      type: 0
     - x: 0
       z: 0
+      type: 0
   - beatIndex: 20
     blocks:
     - x: 2
       z: 2
+      type: 0
     - x: 1
       z: 2
+      type: 0
     - x: 0
       z: 2
+      type: 0
   - beatIndex: 22
     blocks:
     - x: 3
       z: 1
+      type: 0
     - x: 3
       z: 0
+      type: 0
     - x: 3
       z: 2
+      type: 0
   - beatIndex: 26
     blocks:
     - x: 3
       z: 0
+      type: 0
     - x: 2
       z: 0
+      type: 0
     - x: 1
       z: 0
+      type: 0
     - x: 0
       z: 0
+      type: 0
     - x: 0
       z: 1
+      type: 0
     - x: 3
       z: 1
+      type: 0
   - beatIndex: 28
     blocks:
     - x: 3
       z: 2
+      type: 0
     - x: 0
       z: 2
+      type: 0
   - beatIndex: 32
     blocks:
     - x: 3
       z: 2
+      type: 0
     - x: 2
       z: 2
+      type: 0
     - x: 1
       z: 2
+      type: 0
     - x: 0
       z: 2
+      type: 0
     - x: 0
       z: 1
+      type: 0
     - x: 3
       z: 1
+      type: 0
   - beatIndex: 34
     blocks:
     - x: 2
       z: 1
+      type: 0
     - x: 1
       z: 1
+      type: 0
   - beatIndex: 38
     blocks:
     - x: 3
       z: 1
+      type: 0
     - x: 2
       z: 1
+      type: 0
     - x: 1
       z: 1
+      type: 0
     - x: 0
       z: 1
+      type: 0
   - beatIndex: 40
     blocks:
     - x: 3
       z: 2
+      type: 0
     - x: 0
       z: 2
+      type: 0
     - x: 2
       z: 2
+      type: 0
     - x: 2
       z: 0
+      type: 0
     - x: 2
       z: 1
+      type: 0
     - x: 3
       z: 0
+      type: 0
     - x: 3
       z: 1
+      type: 0
     - x: 1
       z: 2
+      type: 0
   - beatIndex: 44
     blocks:
     - x: 2
       z: 1
+      type: 0
     - x: 2
       z: 2
+      type: 0
     - x: 3
       z: 2
+      type: 0
     - x: 3
       z: 1
+      type: 0
     - x: 3
       z: 0
+      type: 0
     - x: 2
       z: 0
+      type: 0
   - beatIndex: 48
     blocks:
     - x: 1
       z: 0
+      type: 0
     - x: 0
       z: 0
+      type: 0
     - x: 0
       z: 1
+      type: 0
     - x: 0
       z: 2
+      type: 0
     - x: 1
       z: 2
+      type: 0
     - x: 1
       z: 1
+      type: 0
   - beatIndex: 50
     blocks:
     - x: 3
       z: 0
+      type: 0
     - x: 2
       z: 0
+      type: 0
     - x: 0
       z: 2
+      type: 0
     - x: 1
       z: 2
+      type: 0
   - beatIndex: 54
     blocks:
     - x: 3
       z: 2
+      type: 0
     - x: 2
       z: 2
+      type: 0
     - x: 0
       z: 0
+      type: 0
     - x: 1
       z: 0
+      type: 0
   - beatIndex: 60
     blocks:
     - x: 3
       z: 1
+      type: 0
     - x: 2
       z: 1
+      type: 0
     - x: 2
       z: 2
+      type: 0
     - x: 3
       z: 2
+      type: 0
     - x: 3
       z: 0
+      type: 0
     - x: 2
       z: 0
+      type: 0
     - x: 0
       z: 0
+      type: 0
     - x: 0
       z: 1
+      type: 0
     - x: 0
       z: 2
+      type: 0
   - beatIndex: 66
     blocks:
     - x: 1
       z: 2
+      type: 0
     - x: 0
       z: 2
+      type: 0
     - x: 0
       z: 1
+      type: 0
     - x: 1
       z: 1
+      type: 0
     - x: 1
       z: 0
+      type: 0
     - x: 0
       z: 0
+      type: 0
     - x: 3
       z: 0
+      type: 0
     - x: 3
       z: 1
+      type: 0
     - x: 3
       z: 2
+      type: 0
   - beatIndex: 13
     blocks:
     - x: 3
       z: 2
+      type: 0
     - x: 2
       z: 2
+      type: 0
     - x: 1
       z: 2
+      type: 0
     - x: 0
       z: 2
+      type: 0
   - beatIndex: 68
     blocks:
     - x: 2
       z: 0
+      type: 0
     - x: 1
       z: 1
+      type: 0
     - x: 1
       z: 0
+      type: 0
     - x: 2
       z: 1
+      type: 0
     - x: 1
       z: 2
+      type: 0
     - x: 0
       z: 2
+      type: 0
     - x: 2
       z: 2
+      type: 0
     - x: 3
       z: 2
+      type: 0
   - beatIndex: 72
     blocks:
     - x: 3
       z: 0
+      type: 0
     - x: 2
       z: 0
+      type: 0
     - x: 1
       z: 0
+      type: 0
     - x: 0
       z: 0
+      type: 0
     - x: 0
       z: 1
+      type: 0
     - x: 0
       z: 2
+      type: 0
     - x: 1
       z: 2
+      type: 0
     - x: 2
       z: 2
+      type: 0
     - x: 3
       z: 2
+      type: 0
     - x: 3
       z: 1
+      type: 0
   - beatIndex: 76
     blocks:
     - x: 3
       z: 0
+      type: 0
     - x: 2
       z: 0
+      type: 0
     - x: 0
       z: 0
+      type: 0
     - x: 0
       z: 1
+      type: 0
     - x: 2
       z: 2
+      type: 0
     - x: 3
       z: 2
+      type: 0
   - beatIndex: 80
     blocks:
     - x: 2
       z: 0
+      type: 0
     - x: 2
       z: 1
+      type: 0
     - x: 0
       z: 2
+      type: 0
     - x: 0
       z: 0
+      type: 0
     - x: 0
       z: 1
+      type: 0
     - x: 2
       z: 2
+      type: 0
   - beatIndex: 84
     blocks:
     - x: 3
       z: 2
+      type: 0
     - x: 3
       z: 1
+      type: 0
     - x: 3
       z: 0
+      type: 0
     - x: 1
       z: 0
+      type: 0
     - x: 1
       z: 1
+      type: 0
     - x: 1
       z: 2
+      type: 0
   - beatIndex: 88
     blocks:
     - x: 0
       z: 2
+      type: 0
     - x: 0
       z: 1
+      type: 0
     - x: 1
       z: 1
+      type: 0
     - x: 2
       z: 1
+      type: 0
     - x: 3
       z: 1
+      type: 0
     - x: 3
       z: 2
+      type: 0
     - x: 2
       z: 2
+      type: 0
     - x: 1
       z: 2
+      type: 0
   - beatIndex: 89
     blocks:
     - x: 3
       z: 2
+      type: 0
     - x: 2
       z: 2
+      type: 0
     - x: 1
       z: 2
+      type: 0
     - x: 0
       z: 2
+      type: 0
     - x: 0
       z: 1
+      type: 0
     - x: 1
       z: 1
+      type: 0
     - x: 3
       z: 1
+      type: 0
     - x: 2
       z: 1
+      type: 0
   - beatIndex: 90
     blocks:
     - x: 3
       z: 1
+      type: 0
     - x: 2
       z: 1
+      type: 0
     - x: 1
       z: 1
+      type: 0
     - x: 0
       z: 1
+      type: 0
     - x: 1
       z: 2
+      type: 0
     - x: 0
       z: 2
+      type: 0
     - x: 3
       z: 2
+      type: 0
     - x: 2
       z: 2
+      type: 0
   - beatIndex: 92
     blocks:
     - x: 3
       z: 0
+      type: 0
     - x: 1
       z: 0
+      type: 0
     - x: 2
       z: 0
+      type: 0
     - x: 0
       z: 0
+      type: 0
   - beatIndex: 100
     blocks:
     - x: 2
       z: 2
+      type: 0
     - x: 0
       z: 2
+      type: 0
     - x: 1
       z: 2
+      type: 0
     - x: 0
       z: 1
+      type: 0
     - x: 0
       z: 0
+      type: 0
     - x: 1
       z: 0
+      type: 0
     - x: 2
       z: 0
+      type: 0
     - x: 2
       z: 1
+      type: 0
     - x: 3
       z: 1
+      type: 0
     - x: 3
       z: 2
+      type: 0
     - x: 3
       z: 0
+      type: 0
   - beatIndex: 104
     blocks:
     - x: 2
       z: 2
+      type: 0
     - x: 3
       z: 2
+      type: 0
     - x: 3
       z: 1
+      type: 0
     - x: 3
       z: 0
+      type: 0
     - x: 2
       z: 0
+      type: 0
     - x: 1
       z: 0
+      type: 0
     - x: 1
       z: 1
+      type: 0
     - x: 1
       z: 2
+      type: 0
     - x: 0
       z: 2
+      type: 0
     - x: 0
       z: 1
+      type: 0
     - x: 0
       z: 0
+      type: 0

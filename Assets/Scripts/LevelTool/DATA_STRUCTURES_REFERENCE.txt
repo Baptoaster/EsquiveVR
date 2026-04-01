@@ -1,0 +1,179 @@
+// Référence des structures de données du système Level Editor
+
+// ============================================
+// STRUCTURES PRINCIPALES
+// ============================================
+
+// 1. GridBlock - Un bloc sur la grille
+[System.Serializable]
+public struct GridBlock
+{
+    public int x;                  // Position X (0 à 3 pour 4 colonnes)
+    public int z;                  // Position Z (0 à 2 pour 3 rangées)
+    public ObstacleType type;      // Type du bloc (Normal, DelayedRush, etc)
+}
+
+// 2. BeatFrame - Un beat contenant des blocs
+[System.Serializable]
+public class BeatFrame
+{
+    public int beatIndex;                    // Index du beat (0, 1, 2, ...)
+    public List<GridBlock> blocks = ...;     // Liste de blocs dans ce beat
+}
+
+// 3. RythmLevelData - Données complètes d'un niveau
+[CreateAssetMenu(menuName = "Rhythm/Level Data")]
+public class RythmLevelData : ScriptableObject
+{
+    public float bpm = 120f;                 // BPM de la musique
+    public int totalBeats = 128;             // Nombre total de beats
+    public List<BeatFrame> beatFrames = ...  // Tous les beats avec leurs blocs
+    
+    // Méthodes utiles
+    public BeatFrame GetBeat(int index);
+    public void AddBlock(int beatIndex, GridBlock block);
+    public void RemoveBlock(int beatIndex, int x, int z);
+}
+
+// ============================================
+// ENUMERATIONS
+// ============================================
+
+// Types de blocs possibles
+public enum ObstacleType
+{
+    Normal,        // Bloc normal qui doit être évité
+    DelayedRush    // Bloc qui accélère après N beats
+}
+
+// ============================================
+// EXEMPLES D'UTILISATION
+// ============================================
+
+// Exemple 1: Ajouter un bloc
+BeatFrame frame = levelData.GetBeat(0);
+if (frame != null)
+{
+    GridBlock newBlock = new GridBlock 
+    { 
+        x = 1, 
+        z = 1, 
+        type = ObstacleType.Normal 
+    };
+    levelData.AddBlock(0, newBlock);
+}
+
+// Exemple 2: Itérer sur tous les blocs d'un beat
+BeatFrame frame = levelData.GetBeat(5);
+foreach (var block in frame.blocks)
+{
+    Debug.Log($"Bloc at ({block.x}, {block.z}) type {block.type}");
+}
+
+// Exemple 3: Compter les blocs
+int totalBlocks = 0;
+foreach (var frame in levelData.beatFrames)
+{
+    totalBlocks += frame.blocks.Count;
+}
+
+// Exemple 4: Trouver un bloc spécifique
+BeatFrame frame = levelData.GetBeat(10);
+GridBlock? found = frame?.blocks.Find(b => b.x == 2 && b.z == 1);
+
+// ============================================
+// ORGANISATION DES DONNÉES
+// ============================================
+
+/*
+RythmLevelData (ScriptableObject)
+??? bpm: 120
+??? totalBeats: 128
+??? beatFrames: List[BeatFrame]
+    ??? BeatFrame[0] (beat 0)
+    ?   ??? beatIndex: 0
+    ?   ??? blocks: List[GridBlock]
+    ?       ??? GridBlock { x: 1, z: 1, type: Normal }
+    ?       ??? GridBlock { x: 2, z: 0, type: Normal }
+    ??? BeatFrame[1] (beat 1)
+    ?   ??? beatIndex: 1
+    ?   ??? blocks: List[GridBlock]
+    ?       ??? GridBlock { x: 0, z: 2, type: DelayedRush }
+    ??? ...
+*/
+
+// ============================================
+// CALCULS UTILES
+// ============================================
+
+// Convertir beat en secondes
+float beatDuration = 60f / bpm;           // Durée d'un beat
+float timeInSeconds = beatIndex * beatDuration;
+
+// Convertir secondes en beat
+int beatIndex = (int)(timeInSeconds / beatDuration);
+
+// Durée totale
+float totalDuration = totalBeats * beatDuration;
+
+// Exemples avec BPM 120:
+// - 1 beat = 0.5 secondes
+// - 4 beats = 2 secondes
+// - 128 beats = 64 secondes
+
+// ============================================
+// JSON SERIALIZATION (Pour sauvegarde/import)
+// ============================================
+
+/*
+Exemple de structure JSON:
+
+{
+  "bpm": 120,
+  "totalBeats": 128,
+  "beatFrames": [
+    {
+      "beatIndex": 0,
+      "blocks": [
+        {"x": 1, "z": 1, "type": 0},
+        {"x": 2, "z": 0, "type": 0}
+      ]
+    },
+    {
+      "beatIndex": 1,
+      "blocks": [
+        {"x": 0, "z": 2, "type": 1}
+      ]
+    }
+  ]
+}
+*/
+
+// ============================================
+// TIPS POUR L'OPTIMISATION
+// ============================================
+
+// ? Bonne pratique: Cache les beatFrames
+private Dictionary<int, BeatFrame> beatCache = new();
+
+// ? Mauvaise pratique: Chercher lineairement
+foreach (var frame in levelData.beatFrames)
+{
+    if (frame.beatIndex == target) { ... }  // Lent!
+}
+
+// ? Meilleur: Utiliser GetBeat qui fait le cache
+BeatFrame frame = levelData.GetBeat(beatIndex);  // Rapide!
+
+// ============================================
+// FORMAT DE SAUVEGARDE (Recommandé)
+// ============================================
+
+/*
+Utilisez Unity's JsonUtility pour la sérialisation:
+
+string json = JsonUtility.ToJson(levelData);
+File.WriteAllText("level.json", json);
+
+RythmLevelData loaded = JsonUtility.FromJson<RythmLevelData>(json);
+*/

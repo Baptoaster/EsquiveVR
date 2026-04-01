@@ -97,7 +97,7 @@ public class ObstacleBehaviour : MonoBehaviour
     {
         if (!preferRigidbodyMovement)
         {
-            transform.position += transform.forward * moveSpeed * Time.deltaTime;
+            transform.position += transform.up * moveSpeed * Time.deltaTime;
         }
     }
 

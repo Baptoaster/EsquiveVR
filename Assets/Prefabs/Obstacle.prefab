@@ -375,7 +375,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3964492924118325432
 Transform:
   m_ObjectHideFlags: 0
@@ -1164,8 +1164,12 @@ MonoBehaviour:
   onBeat: {fileID: 11400000, guid: 953ac6f911b23f243b3a6b2cfbbd3e1b, type: 2}
   beatFeedbacks: {fileID: 129366940355470133}
   hitFeedbacks: {fileID: 8718563356839215693}
+  obstacleType: 0
   moveSpeed: 3.5
   preferRigidbodyMovement: 0
+  beatsBeforeRush: 4
+  idleSpeed: 0.5
+  rushSpeed: 10
 --- !u!54 &8997953657313742616
 Rigidbody:
   m_ObjectHideFlags: 0
